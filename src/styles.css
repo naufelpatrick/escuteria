@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@theme { --color-purple: #321d58; --color-purple-dark: #24123f; --color-coral: #e5685a; --color-cream: #f7f3eb; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+body { margin: 0; min-width: 320px; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f7f3eb; color: #25193a; }
+#root { width: 100%; min-height: 100vh; overflow: hidden; }
+.content-1920 { width: min(100%, 1920px); margin-inline: auto; }
+
+/* Composição editorial da seção Como funciona */
+#como-funciona > div:first-child {
+  width: min(100%, 1360px);
+  margin-inline: auto;
+}
+#como-funciona > div:last-child {
+  width: min(100%, 1360px);
+  margin-inline: auto;
+}
+@media (min-width: 1024px) {
+  #como-funciona > div:first-child {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 74px 40px 64px;
+    align-items: center;
+  }
+  #como-funciona > div:first-child > div:first-child {
+    padding: 0;
+  }
+  #como-funciona > div:first-child > div:last-child {
+    height: 520px;
+    min-height: 0;
+  }
+  #como-funciona > div:first-child > div:last-child > img {
+    height: 520px;
+    border-radius: 24px;
+  }
+  #como-funciona > div:last-child > div {
+    grid-template-columns: 70px 330px 1fr;
+    padding: 34px 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #inicio .content-1920 > div:last-child > img { display: none; }
+}
+@media (min-width: 1921px) {
+  #problema > *, #como-funciona > *, #vantagens > *, #plataforma > * { max-width: 1920px; margin-inline: auto; }
+}
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #e5685a; color: white; }
