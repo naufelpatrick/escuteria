@@ -61,7 +61,7 @@ function NewsletterForm(){const [status,setStatus]=useState<'idle'|'sending'|'su
 
 const nav = [['O Problema','#problema'],['Como Funciona','#como-funciona'],['Vantagens','#vantagens'],['Plataforma','#plataforma']]
 
-function Logo({dark=false}:{dark?:boolean}) { return dark?<a href="/" className="text-[36px] font-black leading-none tracking-[-.065em] text-[#494696]">escuteri<span className="text-coral">a</span></a>:<a href="/"><img src="/assets/logo.svg" alt="Escuteria" className="h-9 w-auto" /></a> }
+function Logo({dark=false}:{dark?:boolean}) { return <a href="/" aria-label="Escuteria"><img src={dark?'/assets/logo-dark.svg':'/assets/logo.svg'} alt="Escuteria" className="h-9 w-auto" /></a> }
 
 function Home() {
  const [open,setOpen]=useState(false)
