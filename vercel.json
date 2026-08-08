@@ -1,8 +1,11 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/lgpd", "destination": "/privacidade", "permanent": true },
+    { "source": "/universitario", "destination": "/ensino-superior", "permanent": true },
+    { "source": "/blog/nr1-saude-mental-escolas", "destination": "/blog/nr-1-saude-mental-nas-escolas", "permanent": true },
+    { "source": "/blog/sinais-evasao-escolar", "destination": "/blog/sinais-de-evasao-escolar", "permanent": true }
   ]
 }
